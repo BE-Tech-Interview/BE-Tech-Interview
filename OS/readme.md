@@ -33,3 +33,24 @@ Context Switching에 있어서 멀티 프로세스보다 빠르다.
 스레드는 하나의 프로세스 안에서 Stack영역을 제외한 Code, Data, Heap 영역의 데이터를 공유합니다.
 <hr>
 </details>
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>컨텍스트 스위칭이란?</strong></span></summary>
+<hr>
+컨텍스트 스위칭은 CPU가 현재 작업중인 프로세스에서 다른 프로세스로 넘어갈 때 기존의 프로세스 상태를 PCB에 저장하고,
+다음에 실행할 프로세스의 PCB 정보에서 주요 프로세스 상세 정보를 CPU에 업데이트한 후 해당 프로세스를 실행시킵니다.
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>번외</strong></span></summary>
+컨텍스트 스위칭이 필요한 케이스
+
+     1. 할당된 시간을 모두 사용하거나
+     2. 인터럽트가 발생하여 CPU가 이를 처리해야 하거나
+     3. 시스템 호출이 발생하여 사용자 모드 / 커널 모드의 전환이 수행될 때
+
+PCB란?
+
+    PCB는 프로세스 상태관리와 문맥교환을 위해 필요하며,
+    프로세스를 제어하기 위해 프로세스의 상태 정보를 저장해놓는 곳이다.
+  </details>
+<hr>
+</details>
