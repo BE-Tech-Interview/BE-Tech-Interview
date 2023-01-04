@@ -23,13 +23,13 @@ Context Switching에 있어서 멀티 프로세스보다 빠르다.
   </details>
 <hr>
 </details>
-<br>
+
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>프로세스와 스레드의 차이점</strong></span></summary>
 <hr>
 프로세스는 운영체제로부터 자원을 할당 받는 작업의 단위를 말하며, 스레드는 이 프로세스로부터 자원을 할당 받아 실행하는 단위를 말합니다.
-
-프로세스는 각각의 독립적인 객체로 기본적으로 메모리를 공유하지 않으며,
+  
+프로세스는 각각의 독립적인 객체로 기본적으로 메모리를 공유하지 않으며,<br>
 스레드는 하나의 프로세스 안에서 Stack영역을 제외한 Code, Data, Heap 영역의 데이터를 공유합니다.
 <hr>
 </details>
