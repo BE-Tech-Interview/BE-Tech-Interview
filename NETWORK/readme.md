@@ -120,7 +120,7 @@ Full 메시 토폴리지와 Partial 메시 토폴리지가 있으며, Full은 �
 </details>
 
 <details>
-  <summary><span style="border-bottom:0.05em solid"><strong>CORS</strong></span></summary>
+  <summary><span style="border-bottom:0.05em solid"><strong>CORS에 대해 설명해주세요.</strong></span></summary>
 <hr>
 Cross Origin Resource Sharing(교차 출처 자원 공유)의 약자로
 다른 출처에서 리소스를 가져오는 것을 제한하는 동일 출처 정책(SOP)과 반대로, 추가 HTTP 헤더를 사용하여
@@ -138,7 +138,34 @@ Cross Origin Resource Sharing(교차 출처 자원 공유)의 약자로
   <summary><span style="border-bottom:0.05em solid"><strong>HTTP와 HTTPS의 차이점에 대해 설명해주세요.</strong></span></summary>
 <hr>
 HTTPS는 기존의 HTTP에 Secure Socket Layer 계층을 하나 더 두어
-HTTP 통신에서는 수행하지 않았던 데이터의 암호화를 통해 보안을 한층 더 높인 통신 기법입니다. 
+HTTP 통신에서는 수행하지 않았던 데이터의 암호화를 통해 보안을 한층 더 높인 통신 기법입니다.
 
+<hr>
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>REST와 RESTful에 대해서 설명해주세요.</strong></span></summary>
+<hr>
+
+REST란
+URI를 통해 자원을 명시하고,
+METHOD를 통해 자원에 대한 CRUD Operation을 명시하는 방법으로
+네트워크 상에서 Client와 Server사이의 통신 방식 중 하나입니다.
+
+RESTful
+REST의 원리를 따르며 REST API의 설계 규칙을 올바르게 지키는 것을 의미합니다.
+
+<hr>
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>REST API 설계 규칙</strong></span></summary>
+    
+    1. /(구분자: 슬래쉬)는 계층 관계를 나타낼 때 사용합니다.
+    2. URI의 마지막에는 /(구분자: 슬래쉬)를 사용하지 않습니다.
+    3. -(하이픈)은 URI의 가독성을 높이는 데 사용합니다.
+    4. _(언더바)는 URI에 사용하지 않습니다.
+    5. URI경로에 대문자는 가급적 피합니다.
+    6. 파일확장자는 URI에 포함시키지 않습니다.
+    7. 리소스 간에 연관관계가 있는 경우에는 "/리소스명/{리소스ID}/연관관계가있는리소스명"으로 표현합니다.
+  </details>
 <hr>
 </details>
