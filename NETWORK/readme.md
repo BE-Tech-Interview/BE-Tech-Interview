@@ -133,3 +133,12 @@ Cross Origin Resource Sharing(교차 출처 자원 공유)의 약자로
   </details>
 <hr>
 </details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>HTTP와 HTTPS의 차이점에 대해 설명해주세요.</strong></span></summary>
+<hr>
+HTTPS는 기존의 HTTP에 Secure Socket Layer 계층을 하나 더 두어
+HTTP 통신에서는 수행하지 않았던 데이터의 암호화를 통해 보안을 한층 더 높인 통신 기법입니다. 
+
+<hr>
+</details>
