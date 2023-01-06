@@ -23,6 +23,18 @@
   <details>
     <summary><span style="border-bottom:0.05em solid"><strong>인덱스 테이블</strong></span></summary>
     B+Tree 형식으로 정렬되어 있는 INDEX 테이블을 이용하여 조회 속도를 향상시킬 수 있습니다.
+
+    🔎 밸런스 트리(Balanced Tree)란?
+    트리의 노드가 한 방향으로 쏠리지 않도록,
+    노드 삽입 및 삭제 시 특정 규칙에 맞게 재정렬되어 왼쪽과
+    오른쪽 자식 양쪽 수의 밸런스를 유지하는 트리이다.
+
+    항상 양쪽 자식의 밸런스를 유지하므로,
+    무조건 O(logN)의 시간 복잡도를 가지게 된다.
+
+    하지만, 노드 삽입 및 삭제 시 발생하는 재정렬 작업 때문에
+    탐색을 제외한 작업에서는 일반 Tree보다 성능이 좋지 않다.
+
   </details>
 <hr>
 </details>
