@@ -38,3 +38,30 @@
   </details>
 <hr>
 </details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>트랜젝션에 대해 설명해주세요.</strong></span></summary>
+<hr>
+트랜잭션이란 데이터베이스의 상태를 변화시키는 하나의 논리적인 작업 단위입니다.
+원자성, 일관성, 독립성, 지속성의 특징을 가지고 있습니다.
+<br></br>
+
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>트랜젝션의 4가지 특징</strong></span></summary>
+  
+    [원자성] A(Atomic)
+    원자성은 Transaction을 구성하는 연산들이 모두 정상적으로 실행되거나 하나도 실행되지 않아야 한다는
+    all-or-nothing방식을 의미합니다. 수행중에 한작업이라도 실패하면 전부를 rollback하고 모두 성공해야 commit합니다.
+    [일관성] C(Consistency)
+    Transaction이 성공적으로 수행된 후에도 데이터베이스가 일관된 상태를 유지해야 함을 의미합니다.
+    Transaction이 수행되는 과정에서는 일관되지 않을 수 있어도 Transaction이 완료되면 데이터베이스가 일관된 상태를 유지해야됨을 의미합니다.
+    [격리성] I(Isolation)
+    현재 수행 중인 Transaction이 완료될 때까지 Transaction이 생성한 중간 연산 결과에 다른 Transaction들이 접근할 수 없음을 의미합니다.
+    [지속성] D(Durability)
+    데이터베이스에 반영한 수행결과는 어떠한 경우에도 손실되지 않고 영구적이어야 함을 의미합니다.
+    시스템 장애가 발생하더라도 Transaction작업 결과는 없어지지 않고 데이터베이스에 그대로 남아있어야 한다는 의미입니다.
+    장애 발생시 데이터베이스를 원상태로 복구하기 위함입니다.
+
+  </details>
+<hr>
+</details>
