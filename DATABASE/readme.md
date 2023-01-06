@@ -1,3 +1,4 @@
+<!-- 데이터베이스에서 인덱스를 사용하는 이유 및 장단점에 대해 설명해주세요. -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>데이터베이스에서 인덱스를 사용하는 이유 및 장단점에 대해 설명해주세요.</strong></span></summary>
 <hr>
@@ -39,6 +40,7 @@
 <hr>
 </details>
 
+<!-- 트랜젝션에 대해 설명해주세요. -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>트랜젝션에 대해 설명해주세요.</strong></span></summary>
 <hr>
@@ -61,6 +63,69 @@
     데이터베이스에 반영한 수행결과는 어떠한 경우에도 손실되지 않고 영구적이어야 함을 의미합니다.
     시스템 장애가 발생하더라도 Transaction작업 결과는 없어지지 않고 데이터베이스에 그대로 남아있어야 한다는 의미입니다.
     장애 발생시 데이터베이스를 원상태로 복구하기 위함입니다.
+
+  </details>
+<hr>
+</details>
+
+<!-- Connection Pool과 사용하는 이유에 대해서 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Connection Pool과 사용하는 이유에 대해서 설명해주세요.</strong></span></summary>
+
+<hr>
+
+WAS(웹 컨테이너)가 실행 될 때 DB연결을 위해 미리 일정 수의 Connection 객체를 만들어 Pool에 저장했다가
+
+사용자의 요청이 발생하면 Pool에서 생성되어 있는 Connection 객체를 빌려주고
+사용자가 사용이 끝나면 Connection 객체를 다시 Pool에 반환하여 보관하는 기법입니다.
+커넥션 풀을 사용하면 생성 비용과 시간을 줄이고 DB 접근 시간을 단축시킵니다.
+또한, 미리 정해진 숫자의 Connection을 통해서 DB에 걸리는 부하를 조정하고 서버의 한정적인 자원을 효율적으로 사용할 수 있습니다.
+
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>Spring Application에서 Connection Pool의 Connection 수를 변경하는 방법과 기본값</strong></span></summary>
+
+<b>Hikari Connection Pool의 경우 maximumPoolSize's default value = 10</b>
+
+```java
+@Configuration
+public class DatasourceConfig {
+  @Value("${spring.datasource.username}")
+  private String username;
+
+  @Value("${spring.datasource.password}")
+  private String password;
+
+  @Value("${spring.datasource.url}")
+  private String url;
+
+  @Bean
+  @Qualifier("dataSource")
+  @Primary
+  public DataSource oingDataSource() {
+      HikariConfig hikariConfig = new HikariConfig();
+
+      hikariConfig.setUsername(username);
+      hikariConfig.setPassword(password);
+      hikariConfig.setJdbcUrl(url);
+      hikariConfig.setMaximumPoolSize(75); // <- Size를 75로 조정
+
+      return new HikariDataSource(hikariConfig);
+  }
+  ...
+}
+
+```
+
+      or
+
+```ssh
+  // application.yml
+
+  spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 50 <- Size를 50으로 조정
+```
 
   </details>
 <hr>
