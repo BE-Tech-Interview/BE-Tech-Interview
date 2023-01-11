@@ -54,3 +54,22 @@ PCB란?
   </details>
 <hr>
 </details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>교착상태란?</strong></span></summary>
+<hr>
+교착 상태(dead lock)란 두 개 이상의 프로세스가 서로 상대방의 작업이 끝나기 만을 기다리고 있기 때문에 무한 대기에 빠지는 상태를 말합니다.
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>번외</strong></span></summary>
+    
+    ※ 데드락 발생 조건 4가지
+      상호 배제: 자원은 한번에 한 프로세스만 사용 가능
+      점유 대기: 최소한 하나의 자원을 점유하고 있으면서 다른 프로세스에 할당된 자원을 사용하기 위해 대기하는 프로세스 존재
+      비 선점: 한 프로세스에 할당된 자원은 사용이 끝날 때까지 강제로 빼앗을 수 없음
+      순환 대기: 순환 형태로 자원을 대기하고 있는 프로세스의 집합
+  </details>
+<hr>
+</details>
+
+
