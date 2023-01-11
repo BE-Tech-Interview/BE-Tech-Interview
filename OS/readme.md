@@ -51,6 +51,7 @@ PCB란?
 
     PCB는 프로세스 상태관리와 문맥교환을 위해 필요하며,
     프로세스를 제어하기 위해 프로세스의 상태 정보를 저장해놓는 곳이다.
+
   </details>
 <hr>
 </details>
@@ -72,4 +73,22 @@ PCB란?
 <hr>
 </details>
 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Thread Safe란 무엇이며, 스레드의 안전성을 지키는 방법에 대해 설명해주세요.</strong></span></summary>
+<hr>
+Thread Safe란,
+멀티 스레드 환경에서 같은 공유 자원에 대해 동시에 접근이 이루어져도 데이터의 무결성이 지켜지고 정상적으로 동작하는 것을 의미합니다.
 
+Thread Safe를 보장하는 방법으로는 Mutual Exclusion, Atomic Operation, Thread Local Stoarge, Re Entrancy, Immutable objects가 있습니다.
+
+1. Mutual Exclusion: 공유 자원에 하나의 스레드만 접근할 수 있도록, 세마포어/뮤텍스로 락을 적용하는 방법
+
+2. Atomic Operation: 공유자원에 원자적으로 접근하여 상호 배제를 구현하는 방법
+
+3. Thread Local Storage : 스레드끼리 공유하는 힙, 데이터 영역의 자원 접근을 최소화하고, 각 스레드가 독립적으로 가지는 스택 영역의 자원만 사용하도록 설계하는 방법
+
+4. Re Entrancy: 여러 스레드에서 동시에 가능하지만 각각의 스레드가 함수 내에서 공유 자원을 이용하지 않아 항상 정상적인 호출 결과를 얻는 방법
+
+5. Immutable objects : 공유 자원 사용 시 불변 객체를 사용하여 객체 생성 이후에 값을 변경할 수 없도록 하는 방법
+<hr>
+</details>
