@@ -1,3 +1,15 @@
+<!-- 프로세스와 스레드의 차이점 -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>프로세스와 스레드의 차이점</strong></span></summary>
+<hr>
+프로세스는 운영체제로부터 자원을 할당 받는 작업의 단위를 말하며, 스레드는 이 프로세스로부터 자원을 할당 받아 실행하는 단위를 말합니다.
+  
+프로세스는 각각의 독립적인 객체로 기본적으로 메모리를 공유하지 않으며,<br>
+스레드는 하나의 프로세스 안에서 Stack영역을 제외한 Code, Data, Heap 영역의 데이터를 공유합니다.
+<hr>
+</details>
+
+<!-- 멀티 프로세스와 멀티 스레드의 차이점 -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>멀티 프로세스와 멀티 스레드의 차이점</strong></span></summary>
 <hr>
@@ -24,15 +36,7 @@ Context Switching에 있어서 멀티 프로세스보다 빠르다.
 <hr>
 </details>
 
-<details>
-  <summary><span style="border-bottom:0.05em solid"><strong>프로세스와 스레드의 차이점</strong></span></summary>
-<hr>
-프로세스는 운영체제로부터 자원을 할당 받는 작업의 단위를 말하며, 스레드는 이 프로세스로부터 자원을 할당 받아 실행하는 단위를 말합니다.
-  
-프로세스는 각각의 독립적인 객체로 기본적으로 메모리를 공유하지 않으며,<br>
-스레드는 하나의 프로세스 안에서 Stack영역을 제외한 Code, Data, Heap 영역의 데이터를 공유합니다.
-<hr>
-</details>
+<!-- 컨텍스트 스위칭이란 -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>컨텍스트 스위칭이란?</strong></span></summary>
 <hr>
@@ -56,6 +60,7 @@ PCB란?
 <hr>
 </details>
 
+<!-- 교착상태 -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>교착상태란?</strong></span></summary>
 <hr>
@@ -73,6 +78,7 @@ PCB란?
 <hr>
 </details>
 
+<!-- Thread Safe와 Thread Safe를 지키는 방법 -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>Thread Safe란 무엇이며, 스레드의 안전성을 지키는 방법에 대해 설명해주세요.</strong></span></summary>
 <hr>
@@ -90,5 +96,32 @@ Thread Safe를 보장하는 방법으로는 Mutual Exclusion, Atomic Operation, 
 4. Re Entrancy: 여러 스레드에서 동시에 가능하지만 각각의 스레드가 함수 내에서 공유 자원을 이용하지 않아 항상 정상적인 호출 결과를 얻는 방법
 
 5. Immutable objects : 공유 자원 사용 시 불변 객체를 사용하여 객체 생성 이후에 값을 변경할 수 없도록 하는 방법
+<hr>
+</details>
+
+<!-- Paging vs Segmentation -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Paging과 Segmentation에 대해서 설명해주세요.</strong></span></summary>
+<hr>
+
+Paging과 Segmentaiton은 **가상 메모리 관리 기법**이며,
+Paging은 **고정된 영역**의 페이지로 분할하여 물리 주소와 가상 주소를 관리하는 방식이고,
+Segmentation은 **가변적인 영역**의 세그먼트로 분할하여 관리하는 방식입니다.
+<br>
+
+##### ※ 내부단편화(Paging) vs 외부단편화(Segmentation)
+
+내부단편화는 고정된 메모리 블럭에 **사용되지 않고 남아있는 공간이 발생**하는 것을 의미하고,
+외부단편화는 메모리 상에 남아 있는 **총 공간**은 할당 **요청한 공간보다 크지만**, 남아있는 **공간이 연속적이지 않아, 할당할 수 없는 경우**를 의미합니다.
+
+##### ※ 페이지 테이블 vs 세그먼트 테이블
+
+Paging은 페이지 번호에 할당된 프레임 번호를 기입하여 사용하고,
+Segmentation은 세그먼트 번호에 할당된 세그먼트 주소와 변위값(길이)을 기입하여 사용합니다.
+
+| Page Table                             | Segment Table                                |
+| -------------------------------------- | -------------------------------------------- |
+| ![Page Table](./images/page-table.png) | ![Segment Table](./images/segment-table.png) |
+
 <hr>
 </details>
