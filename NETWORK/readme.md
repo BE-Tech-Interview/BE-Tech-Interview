@@ -178,7 +178,8 @@ REST의 원리를 따르며 REST API의 설계 규칙을 올바르게 지키는 
 대량의 트래픽이 한곳에 몰려 데이터 흐름이 제한되는 상황을 말합니다.
 메모리 용량을 늘리거나 서버-클라이언트 간 네트워크 회선을 네트워크 토폴리지에 기반해서 늘리는 방법 등이 있습니다.
 
-추가질문: 네트워크 토폴리지가 무엇인가요? (네트워크 토폴리지 부분 참고) 
+추가질문: 네트워크 토폴리지가 무엇인가요? (네트워크 토폴리지 부분 참고)
+
 </details>
 
 <details>
@@ -190,7 +191,6 @@ TCP/IP 계층의 애플리케이션 계층은 OSI 7계층에서 애플리케이�
 그 외 전송 계층과 인터넷 계층이 동일하게 하나씩 있습니다.
 </details>
 
-
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>HTTPS의 암호화 방식을 알고 있나요?</strong></span></summary>
   <hr>
@@ -201,5 +201,46 @@ HTTP 요청이 오면 대칭키 또는 비대칭키 암호화 방식을 사용�
 
 비대칭키 암호화는 비교적 느리지만 보다 안정적입니다.
 공개키가 노출 되어도 개인키가 있어야만 복호화를 할 수 있기 때문입니다.
+
 </details>
 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>TCP 3,4 Handshake 방식에 대해 설명해주세요.</strong></span></summary>
+  <hr>
+TCP 3-Way handshake는 TCP/IP프로토콜을 이용해서 통신을 하는 응용프로그램이 데이터를 전송하기 전에
+먼저 정확한 전송을 보장하기 위해 상대방 컴퓨터와 사전에 세션을 수립하는 과정을 의미합니다.
+3-Way handshake가 연결 확립을 위해 진행했다면 4way handshake는 세션을 종료하기 위해 수행되는 절차입니다.
+  <br></br> 
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>TCP의 3-way Handshaking 과정</strong></span></summary>
+    <img src = "./images/3way.png">
+
+    Step1 [Client -> SYN -> Server]
+    Client가 Server에게 접속을 요청하는 SYN플래그를 보낸다.
+
+    Step2. [Server -> SYN + ACK -> Client ]
+    Server는 Listen상태에서 SYN이 들어온 것을 확인하고 SYN_RECV상태로 바뀌어 SYN + ACK플래그를 Client에게 전송한다. 그 후 Server는 다시 ACK 플래그를 받기 위해 대기상태로 변경된다.
+
+    Step3. [Client -> ACK -> Server]
+    SYN + ACK 상태를 확인한 Client는 서버에게 ACK를 보내고 연결 성립(Established)이 된다.
+
+  </details>
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>TCP의 4-way Handshaking 과정</strong></span></summary>
+    <img src = "./images/4way.png">
+    
+    Step1 [Client -> FIN -> Server]
+    Client가 연결을 종료하겠다는 FIN플래그를 전송한다. 보낸 후에 FIN-WAIT-1 상태로 변한다.
+
+    Step2 [Server-> ACK -> Client]
+    FIN 플래그를 받은 Server는 확인메세지인 ACK를 Client에게 보내준다. 그 후 CLOSE-WAIT상태로 변한다. Client도 마찬가지로 Server에서 종료될 준비가 됐다는 FIN을 받기위해  FIN-WAIT-2 상태가 된다.
+
+    Step3 [Server -> FIN -> Client]
+    Close준비가 다 된 후 Server는 Client에게 FIN 플래그를 전송한다.
+
+    Step4 [Client -> ACK-> Server]
+    Client는 해지 준비가 되었다는 정상응답인 ACK를 Server에게 보내준다. 이 때, Client는 TIME-WAIT 상태로 변경된다.
+
+  </details>
+<hr>
+</details>
