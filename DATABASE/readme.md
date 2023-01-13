@@ -166,3 +166,28 @@ Elastic Search의 키워드 검색은 Inverted Index 구조로 데이터를 저�
   </details>
 <hr>
 </details>
+
+<!-- RDBMS에서 JOIN과 그 종류에 대해 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>RDBMS에서 JOIN과 그 종류에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+JOIN은 두 개 이상의 테이블을 묶어서 하나의 결과물을 만들어서 데이터를 검색하는 방법입니다.
+(1) INNER JOIN : 두 테이블의 교집합, 즉 두 테이블간 JOIN 조건을 만족하는 행을 반환합니다.
+(2) OUTER JOIN: 조인 조건에서 동일한 값이 없는 행도 같이 반환합니다.
+
+- LEFT OUTER JOIN : 왼쪽 테이블의 모든 행이 결과 테이블에 표기됩니다.
+- RIGHT OUTER JOIN : 오른쪽 테이블의 모든 행이 결과 테이블에 표기됩니다.
+- FULL OUTER JOIN : 두 테이블을 기반으로 조인 조건에 만족하지 않는 행까지 모두 표기합니다.
+
+(3) CROSS JOIN: Cartesian Product(카디션 곱)이라고도 하며 조인되는 두 테이블에서 곱집합을 반환합니다.
+(4) SELF JOIN: 자기 자신의 속성과 조건에 맞는 튜플을 조인하는 것입니다.
+
+<div style="width: 40%">
+
+![SQL JOIN](./images/joins.png)
+
+</div>
+
+<hr>
+</details>
