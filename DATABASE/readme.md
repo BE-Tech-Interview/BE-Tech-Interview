@@ -191,3 +191,33 @@ JOIN은 두 개 이상의 테이블을 묶어서 하나의 결과물을 만들�
 
 <hr>
 </details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>정규화에 대해서 설명해주세요.</strong></span></summary>
+<hr>
+
+정규화는 이상 현상이 발생하는 릴레이션을 분리하여 관계형 데이터베이스의 데이터에 존재하는 중복을 최소화하기 위한 작업을 의미합니다.
+  
+즉, 데이터의 중복을 없애고 데이터의 일관성, 무결성을 유지하는 과정을 의미합니다.
+
+<br></br>
+
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>이상 현상의 종류</strong></span></summary>
+    
+    삽입 이상: 데이터를 추가할 때 부득이하게 NULL이 입력되는 현상
+    삭제 이상: 삭제 시 연쇄삭제 현상이 발생하는 현상
+    수정 이상: 수정 시 데이터의 일관성이 훼손되는 현상
+
+  </details>
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>정규형 원칙</strong></span></summary>
+ 
+    제 1정규형 : 릴레이션의 모든 도메인이 더 이상 분해될 수 없는 원자 값만으로 구성되어야 한다.
+    제 2정규형 : 릴레이션이 제 1정규형이며 부분 함수의 종속성을 제거한 형태를 의미한다.
+    제 3정규형 : 속성들이 이행적으로 종속되어 있는지 여부를 판단하는 것이다.
+
+  </details>
+ 
+<hr>
+</details>
