@@ -244,3 +244,42 @@ TCP 3-Way handshake는 TCP/IP프로토콜을 이용해서 통신을 하는 응�
   </details>
 <hr>
 </details>
+
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>TCP와 UDP의 차이점과 장단점에 대해서 설명해주세요.</strong></span></summary>
+<hr>
+
+TCP는 연결형 서비스를 지원하는 프로토콜이며, UDP는 비연결형 서비스를 지원하는 프로토콜입니다.
+  
+TCP는 1대1 통신으로 신뢰성 있는 데이터를 지원한다는 장점을 가지고 있고
+흐름제어와 혼잡제어를 통한 과부하 방지로 데이터 손실을 최소화하며,
+HTTP등 신뢰성 있는 통신에 사용됩니다.
+  
+UDP는 일방적으로 데이터를 전달하는 통신 프로토콜로,
+데이터의 손실이 발생해도 무시하며,
+실시간으로 빠르게 데이터를 받아야 하는 경우에 사용됩니다.
+<hr>
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>번외</strong></span></summary>
+    ※ 가상회선 패킷 교환 방식(TCP)
+    
+각 패킷에 가상회선 식별자가 포함되며 전송된 순서대로 도착하는 방식.
+    
+※ 데이터그램 패킷 교환 방식(UDP)
+    
+패킷이 독립적으로 최적의 경로를 선택하여 전송되어 순서가 다르게 도착할 수도 있는 방식.
+  </details>
+<hr>
+</details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>네트워크 병목현상이 무엇인지 설명하고 개선할 수 있는 방법을 제시하세요.</strong></span></summary>
+  <hr>
+
+대량의 트래픽이 한곳에 몰려 데이터 흐름이 제한되는 상황을 말합니다.
+메모리 용량을 늘리거나 서버-클라이언트 간 네트워크 회선을 네트워크 토폴리지에 기반해서 늘리는 방법 등이 있습니다.
+
+추가질문: 네트워크 토폴리지가 무엇인가요? (네트워크 토폴리지 부분 참고)
+
+</details>
