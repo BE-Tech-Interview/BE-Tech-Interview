@@ -130,3 +130,39 @@ public class DatasourceConfig {
   </details>
 <hr>
 </details>
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Elastic Search의 키워드 검색과 RDBMS의 LIKE 검색의 차이에 대해 설명해주세요.</strong></span></summary>
+<hr>
+Elastic Search의 키워드 검색은 Inverted Index 구조로 데이터를 저장해서 키워드를 분리합니다.
+동의어나 유의어를 활용한 검색이 가능하며, 비정형 데이터의 색인과 검색이 가능하고, 역색인 지원으로 매우 빠른 검색이 가능합니다.
+또한, 형태소 분석을 통한 자연어 처리가 가능하다는 차이점이 있습니다.
+<br></br>
+반면, RDBMS는 LIKE 검색을 통해 와일드카드로 시작하지 않는 경우에만 인덱스를 사용하여 데이터 검색을 합니다.
+그러나 단순 텍스트 매칭에 대한 검색만을 제공하고, 비정형 데이터의 색인과 검색이 불가능합니다.
+<br></br>
+
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>🔎 Elastic Search</strong></span></summary>
+    
+    Elasticsearch는 Apache Lucene 기반의 오픈소스 실시간 분산 검색 엔진입니다
+    Apache Lucene은 내부적으로 Inverted File Index를 활용하여 색인 구조를 생성합니다.
+    이를 기반으로 하는 Elasticsearch 또한 동일한 방식으로 색인 구조를 생성하여 데이터를 저장합니다.
+
+  </details>
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>Inverted Index (역색인)</strong></span></summary>
+ 
+    역색인은 특정 키워드(Term)로 포함하고 있는 문서들에 대한 Primary Key를 맵핑하는 인덱스 테이블을 생성하며, 이 테이블을 활용하여 빠른 문서 탐색을 가능케 합니다.
+    검색엔진에서 역색인 인덱스 테이블은 주로 BTree, Trie, Hash Table 등의 자료구조를 활용하여 구현됩니다.
+
+  </details>
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>ES - 랭킹 알고리즘</strong></span></summary>
+
+    Elastic Search는 랭킹 알고리즘을 통해서 가장 유사한 순서대로 결과를 나타냅니다.
+    BM25(a.k.a Okapi BM25)는 주어진 쿼리에 대해 문서와의 연관성을 평가하는 랭킹 함수로 사용되는 알고리즘이며, BM25는 엘라스틱서치 5.0부터 default로 적용되었습니다.
+
+  </details>
+<hr>
+</details>
