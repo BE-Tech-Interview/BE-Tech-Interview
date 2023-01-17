@@ -55,3 +55,31 @@ IoC는 제어의 역전이라고 말하며, 간단히 말해 "제어의 흐름�
 
 <hr>
 </details>
+
+<!-- Filter와 Interceptor의 차이에 대해서 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>스프링에서 AOP가 무엇인가요?</strong></span></summary>
+<hr>
+AOP란 관점 지향 프로그래밍으로
+
+어떠한 핵심 비즈니스 로직의 클래스나 메소드를 기준으로 관점을 잡고 모듈화하고
+공통되고 반복적인 코드들을 모듈과 분리하여 재사용하는 것을 의미합니다.
+<br></br>
+스프링 AOP의 목적은 OOP와 마찬가지로 모듈화해서 재사용 가능한 구성을 만드는 것이고, 모듈화된 객체를 편하게 적용할 수 있게 함으로써 개발자가 비즈니스 로직을 구현하는 데만 집중할 수 있게 도와주는 것입니다.
+<br></br>
+Spring은 Bean으로 등록된 객체에 프록시 객체를 사용하여 접근제어 및 부가기능을 추가할 수 있습니다.
+<br></br>
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>번외</strong></span></summary>
+
+    ※ Spring AOP의 Advice 종류
+    Before: 모듈 실행 전
+    After Returning: 모듈 실행 후(예외 발생 X)
+    Afther Throwing: 모듈 실행 도중 예외 발생 시
+    After: 모듈 실행 후 예외, 결과에 상관 없이
+    Around: 모듈 실행 전, 후, 익셉션 발생 시
+
+  </details>
+<hr>
+</details>
