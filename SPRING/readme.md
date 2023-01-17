@@ -56,7 +56,7 @@ IoC는 제어의 역전이라고 말하며, 간단히 말해 "제어의 흐름�
 <hr>
 </details>
 
-<!-- Filter와 Interceptor의 차이에 대해서 설명해주세요. -->
+<!-- 스프링에서 AOP가 무엇인가요? -->
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>스프링에서 AOP가 무엇인가요?</strong></span></summary>
 <hr>
@@ -81,5 +81,23 @@ Spring은 Bean으로 등록된 객체에 프록시 객체를 사용하여 접근
     Around: 모듈 실행 전, 후, 익셉션 발생 시
 
   </details>
+<hr>
+</details>
+
+<!--Spring과 Spring Boot의 차이점에 대해 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Spring과 Spring Boot의 차이점에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+첫째, 기존 스프링에서는 웹 어플리케이션이 압축된 war파일과 이 war파일을 실행시킬 WAS를 함께 배포했지만,
+스프링 부트는 **내장 WAS**를 통해 단순히 jar파일만 통해서 배포가 가능합니다.
+
+둘째, 각종 환경 설정등을 **@SpringBootApplication** 어노테이션을 통해 자동으로 설정해주기 때문에
+설정들을 하나하나 따로 설정해줄 필요가 없습니다.
+
+셋째, 스프링 부트는 spring-boot-starter에 의해 모든 **의존성을 좀 더 편리**하게 관리할 수 있게 해줍니다.
+예를 들어, spring-boot-starter-jpa의 의존성을 추가했을 때, spring-aop, spring-jdbc등이 같이 선언되어 있기 때문에
+의존성을 추가하기 편리합니다.
+
 <hr>
 </details>
