@@ -332,3 +332,34 @@ GET은 요청을 전송할 때 URL 주소 끝에 파라미터(쿼리스트링)�
   </details>
 <hr>
 </details>
+
+<!-- 쿠키와 세션에 대해 설명해보세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>쿠키와 세션에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+쿠키와 세션은 HTTP 프로토콜 환경의 connectionless, stateless 특성을 보완하기 위해 사용됩니다.
+
+쿠키는 사용자의 로컬에 저장되어 있는 키-값 형태의 작은 데이터 파일이고,<br>
+세션은 서버에서 접속해서 웹 브라우저를 종료하여 연결을 끝내는 시점까지 클라이언트에 세션ID를 부여하여 인증상태를 유지하는 기술입니다.
+
+쿠키보다 세션이 보안성이 훨씬 뛰어나지만 추가적인 서버의 자원을 사용해야 하기 때문에 부하가 발생할 수 있습니다.
+
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>쿠키의 동작 방식</strong></span></summary>
+
+[쿠키의 동작 방식]
+클라이언트 요청 → 서버에서 쿠키 생성 → HTTP 헤더에 쿠키를 포함시켜 응답 → 브라우저에 저장 → <br> 쿠키 만료 기간까지 HTTP 헤더에 쿠키를 자동으로 담아 서버에 요청
+
+  </details>
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>세션의 동작 방식</strong></span></summary>
+
+[세션의 동작 방식]
+클라이언트가 서버에 접속시 서버가 클라이언트의 정보를 세션에 저장하고 세션ID를 쿠키에 담아 발급 →<br>클라이언트는 서버에 요청시 세션ID가 담긴 쿠키를 담아 전송 → 세션ID를 통해 클라이언트 정보를 판단
+
+  </details>
+
+<hr>
+</details>
