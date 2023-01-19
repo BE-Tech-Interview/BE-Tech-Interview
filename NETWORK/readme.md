@@ -307,3 +307,28 @@ UDP는 일방적으로 데이터를 전달하는 통신 프로토콜로,
   </details>
 <hr>
 </details>
+
+<!-- GET과 POST의 차이점에 대해서 설명해보세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>GET과 POST의 차이점에 대해서 설명해보세요.</strong></span></summary>
+<hr>
+
+GET 요청은 클라이언트에서 서버의 리소스로부터 정보를 요청하기 위해 사용되는 메서드입니다.
+
+POST 요청은 클라이언트에서 서버로 리소스를 생성하거나 업데이트하기 위해 데이터를 보낼 때 사용 되는 메서드입니다.
+
+GET은 요청을 전송할 때 URL 주소 끝에 파라미터(쿼리스트링)를 포함하지만, POST는 GET과 달리 데이터를 추가하기 위해 body에 추가하고자 하는 자원 정보를 body에 담아 서버에 전송합니다.
+
+또한, GET 요청은 멱등이며, POST는 멱등이 아닙니다.
+
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>멱등(idempotent)이란?</strong></span></summary>
+
+    멱등의 사전적 정의는 연산을 여러 번 적용하더라도 결과가 달라지지 않는 성질을 의미합니다.
+
+    GET은 리소스를 조회한다는 점에서 여러 번 요청하더라도 응답이 똑같을 것 입니다.
+    반대로 POST는 리소스를 새로 생성하거나 업데이트할 때 사용되기 때문에 멱등이 아니라고 볼 수 있습니다.
+
+  </details>
+<hr>
+</details>
