@@ -232,3 +232,31 @@ JOIN은 두 개 이상의 테이블을 묶어서 하나의 결과물을 만들�
 
 <hr>
 </details>
+
+
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>ORM에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+ORM이란 Object Relational Mapping의 약자로
+
+객체들의 관계를 바탕으로 SQL문을 자동으로 생성하여
+
+관계형 데이터베이스의 레코드와 객체를 연결시켜주는 것을 의미합니다.
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>ORM의 장점과 단점</strong></span></summary>
+ 
+    [장점]
+      직접 Query문을 작성하지 않기 때문에 비즈니스 로직에 집중할 수 있게 도와준다.
+      재사용 및 유지보수가 편리하다.
+      DBMS에 대한 족송성이 줄어든다.
+    [단점]
+      프로젝트가 복잡해지면 성능상의 문제가 발생할 수 있다.(N+1)
+      DBMS의 고유 기능을 이용하기 어렵다.
+
+  </details>
+
+<hr>
+</details>
+
