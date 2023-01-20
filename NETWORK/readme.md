@@ -363,3 +363,27 @@ GET은 요청을 전송할 때 URL 주소 끝에 파라미터(쿼리스트링)�
 
 <hr>
 </details>
+
+<!-- OSI7계층과 TCP/IP 4계층의 차이점에 대해 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>OSI7계층과 TCP/IP 4계층의 차이점에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+OSI 7계층은 물리, 데이터링크, 네트워크, 전송, 세션, 표현, 응용의 7단계를 거쳐 사용자에게 정보가 전달되고,
+TCP/IP는 네트워크, 인터넷, 전송, 응용의 4단계를 거쳐 사용자에게 정보가 전달됩니다.
+  
+OSI 7계층은 통신이 일어나는 과정을 단계별로 나누어 표준화한 것이고,
+TCP/IP는 주로 HTTP 인터넷 통신에 사용되는 프로토콜 기법입니다.
+  
+  <details>
+    <summary><span style="border-bottom:0.05em solid"><strong>먼저 개발된 모델은?</strong></span></summary>
+    
+    TCP/IP 프로토콜은 OSI 모델보다 먼저 개발되었으며 TCP/IP 프로토콜의 계층은 OSI 모델의 계층과 정확하게 일치하지 않습니다.
+    
+    세션(Session)과 표현(presentation) 2개의 계층이 TCP/IP프로토콜 그룹에는 없습니다.
+
+  </details>
+  <img src = "./images/osiTcp.png">
+
+<hr>
+</details>
