@@ -383,7 +383,7 @@ TCP/IP는 주로 HTTP 인터넷 통신에 사용되는 프로토콜 기법입니
     세션(Session)과 표현(presentation) 2개의 계층이 TCP/IP프로토콜 그룹에는 없습니다.
 
   </details>
-  <img src = "./images/osiTcp.png">
+  <img src = "./images/OsiTcp.png">
 
 <hr>
 </details>
