@@ -233,7 +233,6 @@ JOIN은 두 개 이상의 테이블을 묶어서 하나의 결과물을 만들�
 <hr>
 </details>
 
-
 <details>
   <summary><span style="border-bottom:0.05em solid"><strong>ORM에 대해 설명해주세요.</strong></span></summary>
 <hr>
@@ -260,3 +259,25 @@ ORM이란 Object Relational Mapping의 약자로
 <hr>
 </details>
 
+<!-- 샤딩에 대해 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>샤딩에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+샤딩(Sharding)은 동일한 스키마를 가지고 있는 데이터를 샤드라고 하는 더 작은 청크로 분할하여<br>
+샤드키에 따라 여러개의 데이터베이스 서버에 나누어 저장하는 기법입니다.<br>
+데이터에 접근할 때는 샤딩키를 사용하며 동적으로 DB 서버를 매핑하는 과정이 필요합니다.<br>
+또한, DB 트래픽을 분산할 수 있는 중요한 수단이며, 특정 DB의 장애가 전면 장애로 이어지지 않게 하는 역할을 합니다.<br>
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>샤딩 추가 설명</strong></span></summary>
+ 
+한 데이터베이스에는 제한된 양의 데이터만 처리할 수 있는데<br>
+어플리케이션에 저장되는 데이터의 양이 갈수록 증가하게 되면,<br>
+동시에 정보를 읽거나 저장하는 사용자가 많아지게 되고,<br>
+병목 현상이 자주 발생하게 되기 때문에 어플리케이션의 속도가 느려지고 사용자의 경험에 영향을 미칩니다.<br>
+
+  </details>
+
+<hr>
+</details>
