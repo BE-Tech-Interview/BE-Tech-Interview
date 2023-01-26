@@ -281,3 +281,29 @@ ORM이란 Object Relational Mapping의 약자로
 
 <hr>
 </details>
+
+<!-- Redis의 정의와 장단점에 대해 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Redis의 정의와 장단점에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+Redis는 Remote Dictionary Server의 약자로 메모리 안에 key-value형태로 데이터를 저장하는 NoSQL입니다.<br></br>
+Redis는 다양한 데이터형으로 영속성과 원자성을 지원하고
+읽기 성능 증대를 위한 서버 측 복제를, 쓰기 성능 증대를 위한 클라이언트 샤딩을 지원한다는 장점이 있지만,<br></br>
+싱글 스레드를 지원하기 때문에 대규모 데이터 처리 시 응답 속도가 불안정할 수 있으며, 메모리 파편화가 발생하기 쉽다는 단점이 있습니다.
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>Redis 단점 보완 방법</strong></span></summary>
+
+Redis는 데이터를 disk에 저장할 수 있습니다.<br>
+따라서 Redis는 서버가 shutdown된 후에 restart 하더라도 disk에 저장해놓은 데이터를 다시 읽어서 데이터가 유실되지 않습니다. Redis는 데이터를 disk에 저장하는 방식은 snapshot, AOF 방식이 있습니다.<br>
+
+- Snapshot : 스냅샷은 RDB에서도 사용하고 있는 어떤 특정 시점의 데이터를 DISK에 옮겨담는 방식을 뜻합니다. Blocking 방식의 SAVE와 Non-blocking 방식의 BGSAVE 방식이 있습니다.
+- AOF : Redis의 모든 write/update 연산 자체를 모두 log 파일에 기록하는 형태입니다. 서버가 재시작할 시 write/update를 순차적으로 재실행, 데이터를 복구합니다.
+
+위 방법은 인 메모리 방식을 사용하는 Redis에서 장애 발생 시 데이터가 유실 될 수 있는 단점을 보완할 수 있는 방법입니다.
+
+  </details>
+
+<hr>
+</details>
