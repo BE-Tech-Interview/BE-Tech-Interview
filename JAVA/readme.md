@@ -97,3 +97,15 @@ static이 아닌 메서드를 static 메서드로 오버라이드 할 수 없습
 
  <hr>
  </details>
+ 
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Java의 main 메서드가 static인 이유를 설명해주세요.</strong></span></summary>
+  <hr>
+  
+일반적으로 static으로 선언될 경우 컴파일 시에 메모리에 올라와 있기 때문에 객체 생성을 하지 않고 사용할 수 있지만<br>
+static으로 선언되지 않을 경우에 런타임 시에 객체 생성 후 사용되어야 합니다. <br>
+main 메서드는 컴파일 시에 이미 메모리에 올라와있어야 하기 때문에 static으로 선언되어야 합니다. <br>
+
+
+ <hr>
+ </details>
