@@ -159,3 +159,24 @@ CORS 에러를 해결하기 위해서는
   </details>
 <hr>
 </details>
+
+<!-- Web Server와 Web Application Server의 차이점에 대해 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Web Server와 Web Application Server의 차이점에 대해 설명해주세요.</strong></span></summary>
+<hr>
+
+웹 서버(Web Server)란 HTTP 프로토콜을 기반으로 
+클라이언트가 웹 브라우저에서 어떠한 요청을 하면 그 요청을 받아 정적 컨텐츠를 제공하는 서버입니다. 
+이때 웹 서버가 정적 컨텐츠가 아닌 동적 컨텐츠를 요청받으면 WAS에게 해당 요청을 넘겨주고, WAS에서 처리한 결과를 클라이언트에게 전달하는 역할도 하며, Apache, NginX 등이 있습니다.
+
+WAS란 DB 조회 혹은 다양한 로직 처리를 요구하는 동적 컨텐츠를 제공하기 위해 만들어진 Application 서버입니다.
+웹서버와 웹 컨테이너가 결합한 형태라고 볼 수 있으며, 웹 서버의 기능들을 구조적으로 분리하여 처리하는 역할을 합니다.
+WAS에는 Apache Tomcat 등이 있습니다.
+
+※ 웹 컨테이너란?
+클라이언트 요청에 내부 로직을 통해 결과를 처리하고 동적 컨텐츠를 생성해 클라이언트에게 응답 해주는 역할을 수행합니다.
+(JSP와 Servlet 처리, Servlet 수명 주기 관리, URL 서블릿 매핑, HTTP Request 수신 및 응답 등)
+대표적인 예로 Tomcat, Jeus, JBoss 등이 있습니다.
+
+<hr>
+</details>
