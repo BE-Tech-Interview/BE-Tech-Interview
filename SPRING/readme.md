@@ -101,3 +101,61 @@ Spring은 Bean으로 등록된 객체에 프록시 객체를 사용하여 접근
 
 <hr>
 </details>
+
+<!--Spring에서 CORS 에러를 해결하기 위한 방법을 설명해주세요. -->
+<details>
+  <summary><span style="border-bottom:0.05em solid"><strong>Spring에서 CORS 에러를 해결하기 위한 방법을 설명해주세요.</strong></span></summary>
+<hr>
+
+CORS 에러를 해결하기 위해서는
+
+1. @CrossOrigin 어노테이션을 CORS 정책을 적용할 대상에 적용하거나,
+2. WebMvcConfigurer를 상속한 Config 클래스를 만들어서 CORS 정책을 설정하거나,
+3. RestTemplate을 이용한 프록시 서버를 구현하는 방법이 있습니다.
+
+<details>
+    <summary><span style="border-bottom:0.05em solid"><strong>번외</strong></span></summary>
+
+1. @CrossOrigin 어노테이션 활용하기
+
+   - spring 4.2 버전부터 지원하며, Controller 혹은 method단위로 적용이 가능합니다.
+   - 허용할 도메인과, 헤더, 캐시 저장 시간 설정이 가능합니다.
+
+   ```JAVA
+   @CrossOrigin(origins = "http://localhost:8080")
+   @GetMapping("/greeting")
+   public Greeting greeting(@RequestParam(required = false, defaultValue = "World") String name) {
+     System.out.println("==== get greeting ====");
+     return new Greeting(counter.incrementAndGet(), String.format(template, name));
+   }
+   ```
+
+   2. WebConfig 파일에 CORS 설정 처리하기
+
+   - WebMvcConfigurer를 상속받는 WebConfig 파일을 만들고, @Configuration을 통해 환경파일로 설정합니다.
+   - 허용할 도메인, 프론트 도메인, 헤더, HTTP 메섣, 쿠키 요청 여부, 캐싱 시간 설정이 가능합니다.
+
+   ```JAVA
+   @Configuration
+   public class CorsConfig implements WebMvcConfigurer {
+
+       @Override
+       public void addCorsMappings(CorsRegistry registry) {
+           registry.addMapping("/**")
+                   .allowedOrigins("*")
+                   .allowedMethods("GET", "POST", "PUT", "PATCH", "OPTIONS")
+                   .allowedHeaders("headers")
+                   .maxAge(3000);
+       }
+   }
+   ```
+
+   3. 프록시 서버 사용하기
+
+   - 서버 단에서 CORS 정책 위반으로 400, 500번대의 상태코드를 반환하지 않고 200번 코드를 반환합니다.
+   - CORS 이슈는 브라우저 단에서 서버의 Access-Control-Allow-Origin 값을 보고 방금 보낸 요청의 출처가 허용되는지 판단하고, 허용되지 않으면 발생하기 때문에
+   - 요청을 보내는 쪽에서 프록시 서버를 만들어 간적접으로 전달하면 응답을 받을 수 있습니다.
+
+  </details>
+<hr>
+</details>
